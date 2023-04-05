@@ -22,7 +22,6 @@
         <Nuxt/>
         <slot />
       </div>
-      <NavigationFooter class="w-full" />
     </div>
 
   </div>
