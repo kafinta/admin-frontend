@@ -25,17 +25,25 @@ export default {
         username: '',
         password: '',
       },
-      error_state: false
+      error_state: false,
+      loadingState: false
     }
   },
 
   methods: {
     signIn(){
       if (this.form.username === 'Superadmin' && this.form.password==='password') {
-        this.$router.push({path: '/dashboard'})
+        this.loadingState = true
+        setTimeout(() => {
+          this.$router.push({path: '/dashboard'})
+        }, 2000);
       } else {
-        this.error_state = true
-        this.form.password = ''
+        this.loadingState = true
+        setTimeout(() => {
+          this.error_state = true
+          this.form.password = ''
+          this.loadingState = false
+        }, 2000);
       }
     }
   },
