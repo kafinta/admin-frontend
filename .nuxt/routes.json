@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2ca36182"
+  }
+]
