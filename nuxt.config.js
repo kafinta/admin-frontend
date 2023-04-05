@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Kafinta | Home decor made easy',
+    title: 'Kafinta Admin',
     htmlAttrs: {
       lang: 'en'
     },
