@@ -1,5 +1,12 @@
 [
   {
+    "name": "dashboard",
+    "path": "/dashboard",
+    "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\dashboard.vue",
+    "chunkName": "pages/dashboard",
+    "_name": "_e13224fe"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\index.vue",
