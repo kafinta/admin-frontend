@@ -19,21 +19,15 @@
             </NavigationSideMenu>
           </nuxt-link>
 
-          <nuxt-link to="/products">
-            <NavigationSideMenu menu_text="Products" :is_active="productsActive">
-              <UiIconsProduct />
-            </NavigationSideMenu>
-          </nuxt-link>
-
-          <nuxt-link to="/products">
-            <NavigationSideMenu menu_text="Services" :is_active="servicesActive">
-              <UiIconsGigs />
-            </NavigationSideMenu>
-          </nuxt-link>
-
           <nuxt-link to="/orders">
             <NavigationSideMenu menu_text="Orders" :is_active="OrdersActive">
               <UiIconsCart />
+            </NavigationSideMenu>
+          </nuxt-link>
+
+          <nuxt-link to="/categories">
+            <NavigationSideMenu menu_text="Categories" :is_active="categoriesActive">
+              <UiIconsCategories />
             </NavigationSideMenu>
           </nuxt-link>
 
@@ -76,7 +70,7 @@ export default {
       OrdersActive: false,
       earningsActive: false,
       productsActive: false,
-      servicesActive: false
+      projectsActive: false
     };
   },
   methods: {
@@ -87,11 +81,8 @@ export default {
       if (this.$route.name.includes('inbox')) {
         this.inboxActive = true
       }
-      if (this.$route.name.includes('products')) {
-        this.productsActive = true
-      }
-      if (this.$route.name.includes('services')) {
-        this.servicesActive = true
+      if (this.$route.name.includes('categories')) {
+        this.categoriesActive = true
       }
       if (this.$route.name.includes('orders')) {
         this.OrdersActive = true

@@ -23,35 +23,35 @@ export default {
           id: 2,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Users',
-          count: '1000',
+          count: '0',
           route: '/users'
         },
         {
           id: 3,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Sellers',
-          count: '200',
+          count: '0',
           route: '/users'
         },
         {
           id: 4,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Buyers',
-          count: '800',
+          count: '0',
           route: '/users'
         },
         {
           id: 5,
           imagePath: require('@/assets/images/insights/transactions.svg'),
           title: 'Transactions',
-          count: '1328',
+          count: '0',
           route: '/transactions'
         },
         {
           id: 5,
           imagePath: require('@/assets/images/insights/purchases.svg'),
           title: 'Orders',
-          count: '20',
+          count: '0',
           route: '/projects'
         },
       ]
