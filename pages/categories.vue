@@ -16,7 +16,7 @@
       </div>
     </ModalsDrawer>
 
-    <ModalsOverlay :openOverlay="openEditOverlay">
+    <ModalsOverlay :openOverlay="openEditOverlay" @closeOverlay="editCategory()">
       <template #title>Edit Category</template>
     </ModalsOverlay>
 
