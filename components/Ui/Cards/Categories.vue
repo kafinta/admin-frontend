@@ -1,10 +1,10 @@
 <template>
-  <div class="border border-accent-100 rounded-2xl p-5 flex items-center gap-5">
+  <div class="border border-accent-100 rounded-2xl p-5 flex items-center gap-4">
     <img :src="imagePath" class="w-1/2" alt="">
     <div>
       <UiTypographyH3>{{ category_name }}</UiTypographyH3>
       <UiTypographyP>{{ subcategories }} subcategories</UiTypographyP>
-      <UiTypographyP>{{ products }}total products</UiTypographyP>
+      <UiTypographyP>{{ products }} total products</UiTypographyP>
 
       <div class="mt-2 flex gap-3">
         <button @click="$emit('viewCategory')" class="p-1.5 border border-accent-100 rounded-md hover:border-primary hover:text-primary duration-500 ease-in-out">

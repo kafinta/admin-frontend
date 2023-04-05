@@ -1,7 +1,23 @@
 <template>
   <div>
+    <ModalsDrawer :openDialog="openDialog" @closeDialog="viewCategory()">
+      <template #title>Test Category</template>
+      <div>
+        <div class="grid grid-cols-2 gap-5">
+          <div class="p-5 border border-accent-100 rounded-md">
+            <UiTypographyP>Name</UiTypographyP>
+            <UiTypographyH3>Test Category</UiTypographyH3>
+          </div>
+          <div class="p-5 border border-accent-100 rounded-md">
+            <UiTypographyP>Total products</UiTypographyP>
+            <UiTypographyH3>1</UiTypographyH3>
+          </div>
+        </div>
+      </div>
+    </ModalsDrawer>
+    <SharedBackdrop :show="openDialog" @close="viewCategory()" />
     <UiTypographyH2>Categories Overview</UiTypographyH2>
-    <div class="grid gri-cols-2 lg:grid-cols-4 gap-5 my-6">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 my-6">
       <UiCardsOverview v-for="item in overview" :key="item.id" :imagePath="item.imagePath" :item="item.title" :item_count="item.count" :route="item.route" />
     </div>
     <div class="flex justify-between items-center mt-10">
@@ -12,7 +28,7 @@
         <UiButtonsTertiary>New Subcategory</UiButtonsTertiary>
       </div>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 mt-5">
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mt-5">
       <UiCardsCategories v-for="category in categories" :key="category.id" :imagePath="category.imagePath" :category_name="category.name" :subcategories="category.subcategory" :products="category.products" 
       @viewCategory="viewCategory()"
       @editCategory="editCategory()"
@@ -26,6 +42,7 @@ export default {
   layout: 'user',
   data() {
     return {
+      openDialog: false,
       overview: [
         {
           id: 1,
@@ -78,13 +95,12 @@ export default {
 
   methods: {
     viewCategory(){
-
+      this.openDialog = !this.openDialog
     },
     editCategory(){
-
     },
     deleteCategory(){
-      
+
     }
   }
 }
