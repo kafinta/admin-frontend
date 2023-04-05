@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="slide-fade">
-      <div @click="emitCloseDialogEvent()" v-show="openDialog" class="h-screen cursor-pointer filter w-full bg-accent1-700 bg-opacity-50 fixed z-140 top-0">
+      <div @click="emitCloseDialogEvent()" v-show="openDialog" class="h-screen cursor-pointer filter w-full bg-secondary bg-opacity-80 backdrop-blur-sm fixed z-140 inset-0">
       </div>
     </transition>
     

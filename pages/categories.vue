@@ -15,7 +15,11 @@
         </div>
       </div>
     </ModalsDrawer>
-    <SharedBackdrop :show="openDialog" @close="viewCategory()" />
+
+    <ModalsOverlay :openOverlay="openEditOverlay">
+      <template #title>Edit Category</template>
+    </ModalsOverlay>
+
     <UiTypographyH2>Categories Overview</UiTypographyH2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 my-6">
       <UiCardsOverview v-for="item in overview" :key="item.id" :imagePath="item.imagePath" :item="item.title" :item_count="item.count" :route="item.route" />
@@ -43,6 +47,7 @@ export default {
   data() {
     return {
       openDialog: false,
+      openEditOverlay: false,
       overview: [
         {
           id: 1,
@@ -98,6 +103,7 @@ export default {
       this.openDialog = !this.openDialog
     },
     editCategory(){
+      this.openEditOverlay = !this.openEditOverlay
     },
     deleteCategory(){
 
