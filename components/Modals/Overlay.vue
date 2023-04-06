@@ -1,12 +1,12 @@
 <template>
   <div>
     <transition name="slide-fade">
-      <div @click="emitCloseDialogEvent()" v-show="openOverlay" class="h-screen cursor-pointer filter w-full bg-secondary bg-opacity-80 fixed z-140 inset-0  backdrop-blur-sm">
+      <div @click="emitCloseDialogEvent()" v-show="openOverlay" class="h-screen cursor-pointer filter w-full bg-secondary bg-opacity-80 backdrop-blur-sm fixed z-140 inset-0">
       </div>
     </transition>
     
-    <transition name="slide-fade grid place-items-center w-screen">
-      <div v-show="openOverlay" class="relative z-150 w-full sm:w-2/3 lg:w-3/5 xl:w-1/3 bg-white rounded-md mx-auto inset-0">
+    <transition name="slide-fade">
+      <div v-show="openOverlay" class="fixed h-auto w-full sm:w-2/3 lg:w-3/5 xl:w-1/3 bg-white z-150 top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">
         <div class="relative">
           <div class="flex justify-between items-center border-b border-accent1-100 py-3 sm:py-4 sm:px-2 select-none">
             <p class="uppercase font-bold px-4 select-none"><slot name="title" /></p>
@@ -72,3 +72,8 @@ export default {
 
 }
 </script>
+<style>
+.change {
+  transform: translate(-50%, -50%);
+}
+</style>

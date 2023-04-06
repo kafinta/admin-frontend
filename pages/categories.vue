@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="[openDialog ? 'overflow-y-hidden' : '', openEditOverlay ? 'overflow-y-hidden' : '']">
     <ModalsDrawer :openDialog="openDialog" @closeDialog="viewCategory()">
       <template #title>Test Category</template>
       <div>
