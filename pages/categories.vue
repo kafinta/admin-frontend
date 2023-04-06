@@ -18,6 +18,17 @@
 
     <ModalsOverlay :openOverlay="openEditOverlay" @closeOverlay="editCategory()">
       <template #title>Edit Category</template>
+      <div class="py-6">
+        <div class="p-2 bg-accent-100 rounded-md w-fit mx-auto mb-5 2xl:mb-10">
+          <img :src="require('@/assets/images/insights/categories.svg')" alt="" class="w-30">
+
+          <div>
+            <FormInput type="file" placeholder="Upload New" />
+          </div>
+        </div>
+      <FormInput label="Category Name" v-model="category_form.name" :inputValue="category_form.name" />
+      <FormButton class="w-56 mx-auto mt-5 2xl:mt-10">Update Category</FormButton>
+      </div>
     </ModalsOverlay>
 
     <UiTypographyH2>Categories Overview</UiTypographyH2>
@@ -46,6 +57,9 @@ export default {
   layout: 'user',
   data() {
     return {
+      category_form: {
+        name: 'Test Category'
+      },
       openDialog: false,
       openEditOverlay: false,
       overview: [
