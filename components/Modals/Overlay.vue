@@ -15,18 +15,18 @@
             </button>
           </div>
           
-          <div class="px-4 md:px-6 py-5 " :class="(footerButtons ? 'h-screen-80' : 'h-screen-85') + ' ' + (scrollable ? 'custom-scroll-y' : 'overflow-hidden')">
+          <div class="px-4 md:px-6 py-5 " :class="(scrollable ? 'overflow-y-scroll' : 'overflow-hidden')">
             <slot />
           </div>
           
           <div v-show="footerButtons" class="absolute bottom-0 w-full select-none">
             <div class="w-full flex justify-between">
-              <a @click="emitCloseDialogEvent()" class="uppercase font-medium border-t border-r border-gray-400 shadow rounded-bl-xl w-1/2 block px-2 py-3 text-center cursor-pointer bg-white hover:bg-gray-200 transition duration-500">
+              <button @click="emitCloseDialogEvent()" class="uppercase font-medium border-t border-r border-gray-400 shadow rounded-bl-xl w-1/2 block px-2 py-3 text-center cursor-pointer bg-white hover:bg-gray-200 transition duration-500">
                 {{cancelText}}
-              </a>
-              <a @click="emitOkEvent()" class="uppercase font-medium border-t border-accent1-300 shadow rounded-br-xl w-1/2 block px-2 py-3 text-center cursor-pointer bg-accent1-100 hover:bg-accent1-200 transition duration-500">
+              </button>
+              <button @click="emitOkEvent()" class="uppercase font-medium border-t border-accent1-300 shadow rounded-br-xl w-1/2 block px-2 py-3 text-center cursor-pointer bg-accent1-100 hover:bg-accent1-200 transition duration-500">
                 {{okText}}
-              </a>
+              </button>
             </div>
             
           </div>
