@@ -18,7 +18,7 @@
 
     <ModalsOverlay :openOverlay="openEditOverlay" @closeOverlay="editCategory()">
       <template #title>Edit Category</template>
-      <div class="py-6">
+      <form @submit.prevent="submitEdit()" class="py-6">
         <div class="p-2 bg-accent-100 rounded-md w-fit mx-auto mb-5 2xl:mb-10">
           <img :src="require('@/assets/images/insights/categories.svg')" alt="" class="w-30">
 
@@ -26,9 +26,9 @@
             <FormInput type="file" placeholder="Upload New" />
           </div>
         </div>
-      <FormInput label="Category Name" v-model="category_form.name" :inputValue="category_form.name" />
-      <FormButton class="w-56 mx-auto mt-5 2xl:mt-10">Update Category</FormButton>
-      </div>
+        <FormInput label="Category Name" v-model="category_form.name" :inputValue="category_form.name" />
+        <FormButton :loading="loadingState" class="w-56 mx-auto mt-5 2xl:mt-10">Update Category</FormButton>
+      </form>
     </ModalsOverlay>
 
     <UiTypographyH2>Categories Overview</UiTypographyH2>
@@ -108,7 +108,8 @@ export default {
           subcategory: 0,
           products: 0,
         }
-      ]
+      ],
+      loadingState: false
     }
   },
 
@@ -121,6 +122,14 @@ export default {
     },
     deleteCategory(){
 
+    },
+
+    submitEdit(){
+      this.loadingState = true
+      setTimeout(() => {
+        this.editCategory()
+        this.loadingState = false
+      }, 2000);
     }
   }
 }
