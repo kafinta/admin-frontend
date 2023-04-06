@@ -121,7 +121,7 @@ export default {
       this.openEditOverlay = !this.openEditOverlay
     },
     deleteCategory(){
-
+      
     },
 
     submitEdit(){

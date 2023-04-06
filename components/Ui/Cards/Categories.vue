@@ -1,6 +1,6 @@
 <template>
-  <div class="border border-accent-100 rounded-2xl p-5 flex items-center gap-4">
-    <img :src="imagePath" class="w-1/2" alt="">
+  <div class="border border-accent-100 rounded-2xl p-5 flex items-center gap-5">
+    <img :src="imagePath" class="w-24" alt="">
     <div>
       <UiTypographyH3>{{ category_name }}</UiTypographyH3>
       <UiTypographyP>{{ subcategories }} subcategories</UiTypographyP>
