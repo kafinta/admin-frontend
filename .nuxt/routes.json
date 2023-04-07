@@ -7,11 +7,11 @@
     "_name": "_cd6fca02"
   },
   {
-    "name": "dashboard",
-    "path": "/dashboard",
-    "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\dashboard.vue",
-    "chunkName": "pages/dashboard",
-    "_name": "_e13224fe"
+    "name": "login",
+    "path": "/login",
+    "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_99541b54"
   },
   {
     "name": "index",
