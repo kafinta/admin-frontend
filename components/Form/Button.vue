@@ -22,15 +22,16 @@ import Loading from '@/components/Ui/Icons/Loading.vue'
 export default {
     name: "LoadingButton",
     props: {
-        loading: {
-          default: false,
-          type: Boolean
-        },
-        disabled: Boolean,
-        loadingText: {
-          default: "Authenticating",
-          type: String
-        },
+      loading: {
+        default: false,
+        type: Boolean
+      },
+      disabled: Boolean,
+      loadingText: {
+        default: "Authenticating",
+        type: String
+      },
+      primarybg: Boolean
     },
     components: { Loading }
 }

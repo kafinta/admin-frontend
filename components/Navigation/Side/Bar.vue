@@ -7,7 +7,7 @@
         </div>
 
         <div class="mt-6">
-          <nuxt-link to="/dashboard">
+          <nuxt-link to="/">
             <NavigationSideMenu menu_text="Overview" :is_active="dashboardActive">
               <UiIconsOverview />
             </NavigationSideMenu>
@@ -66,16 +66,14 @@ export default {
       username: 'Quadri',
       dashboardActive: false,
       inboxActive: false,
-      gigsActive: false,
+      categoriesActive: false,
       OrdersActive: false,
       earningsActive: false,
-      productsActive: false,
-      projectsActive: false
     };
   },
   methods: {
     routeCheck(){
-      if (this.$route.name.includes('dashboard')) {
+      if (this.$route.name === '/') {
         this.dashboardActive = true
       }
       if (this.$route.name.includes('inbox')) {
@@ -95,6 +93,7 @@ export default {
 
   created() {
     this.routeCheck();
+    console.log(this.$route.name)
   },
 
   watch: {

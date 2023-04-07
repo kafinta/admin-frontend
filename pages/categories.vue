@@ -67,14 +67,14 @@ export default {
           id: 1,
           imagePath: require('@/assets/images/insights/categories.svg'),
           title: 'Categories',
-          count: '0',
+          count: 0,
           route: '/categories'
         },
         {
           id: 2,
           imagePath: require('@/assets/images/insights/categories.svg'),
           title: 'Sub Categories',
-          count: '0',
+          count: 0,
           route: '/categories'
         },
       ],
@@ -88,21 +88,21 @@ export default {
           products: 0,
         },
         {
-          id: 1,
+          id: 2,
           imagePath: require('@/assets/images/insights/purchases.svg'),
           name: 'Test Category',
           subcategory: 0,
           products: 0,
         },
         {
-          id: 1,
+          id: 3,
           imagePath: require('@/assets/images/insights/purchases.svg'),
           name: 'Test Category',
           subcategory: 0,
           products: 0,
         },
         {
-          id: 1,
+          id: 4,
           imagePath: require('@/assets/images/insights/purchases.svg'),
           name: 'Test Category',
           subcategory: 0,
