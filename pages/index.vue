@@ -16,42 +16,42 @@ export default {
           id: 1,
           imagePath: require('@/assets/images/insights/categories.svg'),
           title: 'Categories',
-          count: '0',
+          count: 0,
           route: '/categories'
         },
         {
           id: 2,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Users',
-          count: '0',
+          count: 0,
           route: '/users'
         },
         {
           id: 3,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Sellers',
-          count: '0',
+          count: 0,
           route: '/users'
         },
         {
           id: 4,
           imagePath: require('@/assets/images/insights/users.svg'),
           title: 'Buyers',
-          count: '0',
+          count: 0,
           route: '/users'
         },
         {
           id: 5,
           imagePath: require('@/assets/images/insights/transactions.svg'),
           title: 'Transactions',
-          count: '0',
+          count: 0,
           route: '/transactions'
         },
         {
-          id: 5,
+          id: 6,
           imagePath: require('@/assets/images/insights/purchases.svg'),
           title: 'Orders',
-          count: '0',
+          count: 0,
           route: '/projects'
         },
       ]

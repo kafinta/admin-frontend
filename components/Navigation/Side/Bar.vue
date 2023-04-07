@@ -73,7 +73,7 @@ export default {
   },
   methods: {
     routeCheck(){
-      if (this.$route.name === '/') {
+      if (this.$route.name === 'index') {
         this.dashboardActive = true
       }
       if (this.$route.name.includes('inbox')) {
