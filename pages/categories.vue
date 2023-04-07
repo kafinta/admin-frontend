@@ -31,6 +31,20 @@
       </form>
     </ModalsOverlay>
 
+    <ModalsOverlay :openOverlay="openDeleteOverlay" @closeOverlay="deleteCategory()">
+      <template #title>Delete Category</template>
+      <div class="py-6">
+        <UiTypographyP>Are you sure you want to delete this course</UiTypographyP>
+        <div class="mt-5 2xl:mt-8 p-5 rounded-md border border-accent-100 w-full text-center">
+          <UiTypographyH2>Test Category</UiTypographyH2>
+        </div>
+        <div class="grid grid-cols-2 gap-5 uppercase mt-5 2xl:mt-8">
+          <UiButtonsTertiary @clicked="deleteCategory()" class="w-full uppercase">Cancel</UiButtonsTertiary>
+          <UiButtonsPrimary @clicked="deleteCategory()" class="w-full uppercase">Yes, Continue</UiButtonsPrimary>
+        </div>
+      </div>
+    </ModalsOverlay>
+
     <UiTypographyH2>Categories Overview</UiTypographyH2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 my-6">
       <UiCardsOverview v-for="item in overview" :key="item.id" :imagePath="item.imagePath" :item="item.title" :item_count="item.count" :route="item.route" />
@@ -62,6 +76,7 @@ export default {
       },
       openDialog: false,
       openEditOverlay: false,
+      openDeleteOverlay: false,
       overview: [
         {
           id: 1,
@@ -121,7 +136,7 @@ export default {
       this.openEditOverlay = !this.openEditOverlay
     },
     deleteCategory(){
-      
+      this.openDeleteOverlay = !this.openDeleteOverlay
     },
 
     submitEdit(){

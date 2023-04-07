@@ -93,7 +93,6 @@ export default {
 
   created() {
     this.routeCheck();
-    console.log(this.$route.name)
   },
 
   watch: {
