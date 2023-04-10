@@ -18,7 +18,7 @@
 
     <ModalsOverlay :openOverlay="openEditOverlay" @closeOverlay="editCategory()">
       <template #title>Edit Category</template>
-      <form @submit.prevent="submitEdit()" class="py-6">
+      <form @submit.prevent="submitEdit()">
         <div class="p-2 bg-accent-100 rounded-md w-fit mx-auto mb-5 2xl:mb-10">
           <img :src="require('@/assets/images/insights/categories.svg')" alt="" class="w-30">
 
@@ -33,7 +33,7 @@
 
     <ModalsOverlay :openOverlay="openDeleteOverlay" @closeOverlay="deleteCategory()">
       <template #title>Delete Category</template>
-      <div class="py-6">
+      <div>
         <UiTypographyP>Are you sure you want to delete this course</UiTypographyP>
         <div class="mt-5 2xl:mt-8 p-5 rounded-md border border-accent-100 w-full text-center">
           <UiTypographyH2>Test Category</UiTypographyH2>
@@ -45,6 +45,24 @@
       </div>
     </ModalsOverlay>
 
+    <ModalsOverlay :openOverlay="newCategoryOverlay" @closeOverlay="createCategory()">
+      <template #title>New Category</template>
+      <form @submit.prevent="createCategory()" action="" class="grid gap-5">
+        <FormInput placeholder="Enter new category name" label="Category icon" />
+        <FormInput placeholder="Enter new category name" label="Category name" />
+        <FormButton>Create New Category</FormButton>
+      </form>
+    </ModalsOverlay>
+
+    <ModalsOverlay :openOverlay="newSubcategoryOverlay" @closeOverlay="createSubcategory()">
+      <template #title>New Category</template>
+      <form @submit.prevent="createSubcategory()" action="" class="grid gap-5">
+        <FormInput placeholder="Choose Category" label="Category" />
+        <FormInput placeholder="Enter subcategory name" label="Subcategory name" />
+        <FormButton>Create Subcategory</FormButton>
+      </form>
+    </ModalsOverlay>
+
     <UiTypographyH2>Categories Overview</UiTypographyH2>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 my-6">
       <UiCardsOverview v-for="item in overview" :key="item.id" :imagePath="item.imagePath" :item="item.title" :item_count="item.count" :route="item.route" />
@@ -53,8 +71,8 @@
       <UiTypographyH2>Manage Categories</UiTypographyH2>
 
       <div class="flex gap-5">
-        <UiButtonsPrimary>New Category</UiButtonsPrimary>
-        <UiButtonsTertiary>New Subcategory</UiButtonsTertiary>
+        <UiButtonsPrimary @clicked="createCategory()">New Category</UiButtonsPrimary>
+        <UiButtonsTertiary @clicked="createSubcategory()">New Subcategory</UiButtonsTertiary>
       </div>
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 mt-5">
@@ -77,6 +95,8 @@ export default {
       openDialog: false,
       openEditOverlay: false,
       openDeleteOverlay: false,
+      newCategoryOverlay: false,
+      newSubcategoryOverlay: false,
       overview: [
         {
           id: 1,
@@ -137,6 +157,14 @@ export default {
     },
     deleteCategory(){
       this.openDeleteOverlay = !this.openDeleteOverlay
+    },
+
+    createCategory(){
+      this.newCategoryOverlay = !this.newCategoryOverlay
+    },
+
+    createSubcategory(){
+      this.newSubcategoryOverlay = !this.newSubcategoryOverlay
     },
 
     submitEdit(){

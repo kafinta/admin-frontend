@@ -15,7 +15,7 @@
             </button>
           </div>
           
-          <div class="px-4 md:px-6 py-5 " :class="(scrollable ? 'overflow-y-scroll' : 'overflow-hidden')">
+          <div class="p-4 md:p-6" :class="(scrollable ? 'overflow-y-scroll' : 'overflow-hidden')">
             <slot />
           </div>
           
