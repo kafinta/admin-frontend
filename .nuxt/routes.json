@@ -3,18 +3,28 @@
     "name": "categories",
     "path": "/categories",
     "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\categories.vue",
-    "chunkName": "pages/categories"
+    "chunkName": "pages/categories",
+    "_name": "_cd6fca02"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\login.vue",
-    "chunkName": "pages/login"
+    "chunkName": "pages/login",
+    "_name": "_99541b54"
+  },
+  {
+    "name": "purchases",
+    "path": "/purchases",
+    "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\purchases.vue",
+    "chunkName": "pages/purchases",
+    "_name": "_6b36ef7f"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\QUADRI\\\\Documents\\\\Development\\\\Front-end\\\\--nuxt.js\\\\kafinta\\\\admin-frontend\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_2ca36182"
   }
 ]

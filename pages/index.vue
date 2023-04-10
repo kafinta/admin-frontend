@@ -50,9 +50,9 @@ export default {
         {
           id: 6,
           imagePath: require('@/assets/images/insights/purchases.svg'),
-          title: 'Orders',
+          title: 'Purchases',
           count: 0,
-          route: '/projects'
+          route: '/purchases'
         },
       ]
     }
