@@ -86,7 +86,6 @@
 </template>
 <script>
 export default {
-  layout: 'user',
   data() {
     return {
       category_form: {
