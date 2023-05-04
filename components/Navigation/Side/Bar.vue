@@ -19,6 +19,12 @@
             </NavigationSideMenu>
           </nuxt-link>
 
+          <nuxt-link to="/users">
+            <NavigationSideMenu menu_text="Users" :is_active="usersActive">
+              <UiIconsProfile />
+            </NavigationSideMenu>
+          </nuxt-link>
+
           <nuxt-link to="/categories">
             <NavigationSideMenu menu_text="Categories" :is_active="categoriesActive">
               <UiIconsCategories />
@@ -87,6 +93,9 @@ export default {
       }
       if (this.$route.name.includes('earnings')) {
         this.earningsActive = true
+      }
+      if (this.$route.name.includes('users')) {
+        this.usersActive = true
       }
     },
   },
