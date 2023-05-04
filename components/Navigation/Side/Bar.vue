@@ -91,15 +91,9 @@ export default {
     },
   },
 
-  created() {
+  mounted() {
     this.routeCheck();
   },
-
-  watch: {
-    $route() {
-      location.reload();
-    },
-  }
 }
 </script>
 
