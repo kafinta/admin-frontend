@@ -21,7 +21,7 @@
 
           <nuxt-link to="/users">
             <NavigationSideMenu menu_text="Users" :is_active="usersActive">
-              <UiIconsProfile />
+              <UiIconsUsers />
             </NavigationSideMenu>
           </nuxt-link>
 
@@ -75,6 +75,7 @@ export default {
       categoriesActive: false,
       purchasesActive: false,
       earningsActive: false,
+      usersActive: false,
     };
   },
   methods: {
