@@ -19,6 +19,12 @@
             </NavigationSideMenu>
           </nuxt-link>
 
+          <nuxt-link to="/projects">
+            <NavigationSideMenu menu_text="Projects" :is_active="projectsActive">
+              <UiIconsProjects />
+            </NavigationSideMenu>
+          </nuxt-link>
+
           <nuxt-link to="/users">
             <NavigationSideMenu menu_text="Users" :is_active="usersActive">
               <UiIconsUsers />
@@ -76,6 +82,7 @@ export default {
       purchasesActive: false,
       earningsActive: false,
       usersActive: false,
+      projectsActive: false,
     };
   },
   methods: {
@@ -97,6 +104,9 @@ export default {
       }
       if (this.$route.name.includes('users')) {
         this.usersActive = true
+      }
+      if (this.$route.name.includes('projects')) {
+        this.projectsActive = true
       }
     },
   },
