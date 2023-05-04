@@ -1,5 +1,5 @@
 <template>
-  <div :class="[openDialog ? 'overflow-y-hidden' : '', openEditOverlay ? 'overflow-y-hidden' : '']">
+  <Layouts :class="[openDialog ? 'overflow-y-hidden' : '', openEditOverlay ? 'overflow-y-hidden' : '']">
     <ModalsDrawer :openDialog="openDialog" @closeDialog="viewCategory()">
       <template #title>Test Category</template>
       <div>
@@ -24,7 +24,7 @@
       <UiTypographyH2>Manage Purchases</UiTypographyH2>
       <UiButtonsPrimary>Product deliveries</UiButtonsPrimary>
     </div>
-  </div>
+  </Layouts>
 </template>
 <script>
 export default {
