@@ -1,5 +1,5 @@
 <template>
-  <div :class="[openDialog ? 'overflow-y-hidden' : '', openEditOverlay ? 'overflow-y-hidden' : '']">
+  <Layouts :class="[openDialog ? 'overflow-y-hidden' : '', openEditOverlay ? 'overflow-y-hidden' : '']">
     <ModalsDrawer :openDialog="openDialog" @closeDialog="viewCategory()">
       <template #title>Test Category</template>
       <div>
@@ -20,7 +20,7 @@
       <template #title>Edit Category</template>
       <form @submit.prevent="submitEdit()">
         <div class="p-2 bg-accent-100 rounded-md w-fit mx-auto mb-5 2xl:mb-10">
-          <img :src="require('@/assets/images/insights/categories.svg')" alt="" class="w-30">
+          <img :src="require('@/assets/images/insights/categories.svg')" alt="" class="w-24 mx-auto">
 
           <div>
             <FormInput type="file" placeholder="Upload New" />
@@ -82,7 +82,7 @@
       @deleteCategory="deleteCategory()"
       />
     </div>
-  </div>
+  </Layouts>
 </template>
 <script>
 export default {
