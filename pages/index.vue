@@ -1,14 +1,13 @@
 <template>
-  <div>
+  <Layouts>
     <UiTypographyH2>Quick Insights</UiTypographyH2>
     <div class="mt-6 grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-5 flex-wrap">
       <UiCardsOverview v-for="insight in insights" :key="insight.id" :imagePath="insight.imagePath" :item="insight.title" :item_count="insight.count" :route="insight.route" />
     </div>
-  </div>
+  </Layouts>
 </template>
 <script>
 export default {
-  layout: 'user',
   data() {
     return {
       insights: [
